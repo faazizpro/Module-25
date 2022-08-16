@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahad's Event Handlers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="fh1" class="f-h1">Change Texts By Clicking on the Buttons</h1>
+        
+    </header>
+
+    <div class="one-div">
+        <section>
+            <h1 id="fh2">This is the Second Heading</h1>
+            <h1 id="fh3">This is the Third text</h1>
+            <button onclick="firstHeading()" id="first-update">First Update</button>
+            <button onclick="secondHeading()">Second Update</button>
+        </section>
+    </div>
+
+    <div class="two-div">
+        <h1 id="dh1">This is The Input Field</h1>
+        <p id="p-tag">Please Write Your Name in the Input Field</p>
+        <input id="input-field" type="text" placeholder="Add Your Name">
+        <button id="btn-submit">Submit</button>
+    </div>
+
+    <script>
+        function firstHeading(){
+            const headingOne = document.getElementById('fh2');
+            headingOne.innerText = 'The Text Has Been Changed Using Function called in onclick'
+        }
+
+        function secondHeading(){
+            const secH = document.getElementById('fh3');
+            secH.innerText = 'Third Heading is changed using function'
+        }
+
+        document.getElementById('btn-submit').addEventListener('click', function(){
+            const theField = document.getElementById('input-field');
+            const fieldText = theField.value;
+
+            const p = document.getElementById('p-tag');
+            p.textContent = fieldText;
+            theField.value = '';
+
+        })
+    </script>
+</body>
+</html>
