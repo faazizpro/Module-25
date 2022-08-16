@@ -1,3 +1,6 @@
+//Option 1: Directly set in the onclick in the button
+{/* <button onclick="document.body.style.backgroundColor='yellow' ">Make Yellow</button> */}
+
 //Option 2: Add onclick function
 function makeAqua(){
     document.body.style.backgroundColor = '#8FE3CF';
