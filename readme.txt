@@ -4,7 +4,7 @@ Option 1: Use onclick in button tag.
 <button onclick="document.body.style.backgroundColor='white' ">Make White</button>
 
 Option 2: Call Function Name in the onclick into the button tag:
-Create an anonymous function and call the function name in the onlcick. Here's an example:
+Create a function and call the function name in the onlcick. Here's an example:
 Ex 1:
 <button onclick="makeAqua()">Make Aqua</button>
 <script>
@@ -42,10 +42,32 @@ Example:
 আরেকটা অপশন হলো স্ক্রিপ্ট ট্যাগ এর মধ্যে অন ক্লিক এর মধ্যে ডিরেক্ট ফাংশন লিখে ইভেন হ্যান্ডেল করা যাবে।
 Example:
     <button id="make-barley-white">Make Barley White</button>
-    
+
     <script>
         const makeBarleyWhite = document.getElementById('make-barley-white');
         makeBarleyWhite.onclick = function barleyWhite(){
             document.body.style.backgroundColor = '#FFF4CF';
     }
 
+Option 4: addEventListeners
+স্ক্রিপ্ট এ একটা ভেরিএবল নিয়ে সেটার মধ্যে আইডি কল করতে হব। এর পর ভেরিয়েবল এর সাথে addEventListeners অ্যাড করে কাজ করতে হবে।
+
+Examples:
+//Option 4: 
+const greenButton = document.getElementById('make-paris-green');
+greenButton.addEventListener('click', makeGreen)
+
+function makeGreen(){
+    document.body.style.backgroundColor = '#59CE8F'
+}
+
+// Option 4: Another
+const makeMint = document.getElementById('make-snowy-mint');
+makeMint.addEventListener('click', function mintButton(){
+    document.body.style.backgroundColor = '#CFFFDC';
+})
+
+//Option 4: Final
+document.getElementById('make-rose-pink').addEventListener('click', function(){
+    document.body.style.backgroundColor = '#FF8882';
+})
