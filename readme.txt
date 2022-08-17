@@ -71,3 +71,12 @@ makeMint.addEventListener('click', function mintButton(){
 document.getElementById('make-rose-pink').addEventListener('click', function(){
     document.body.style.backgroundColor = '#FF8882';
 })
+
+=====================================================================================
+Module 25-6: Simple github like delete confirmation button
+1. mouseenter
+2. mousemove
+3. focus
+4. blur
+5. keydown
+6. keyup

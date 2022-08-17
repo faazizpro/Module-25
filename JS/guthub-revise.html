@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="fh1">Hello Fahad Abdul Aziz</h1>
+    <input id="delete" type="text">
+    <button id="hide"  disabled>Hide Heading Tag</button>
+    <script>
+        document.getElementById('delete').addEventListener('keyup', function(inner){
+            const textInfo = inner.target.value;
+            const newBtn = document.getElementById('hide');
+
+            if(textInfo === 'delete'){
+                newBtn.removeAttribute('disabled');
+            }
+            else{
+                newBtn.setAttribute('disabled', true);
+            }
+
+        })
+
+        document.getElementById('hide').addEventListener('click', function(){
+            const hideH1 = document.getElementById('fh1');
+            hideH1.style.display = 'none';
+        })
+    </script>
+</body>
+</html>
